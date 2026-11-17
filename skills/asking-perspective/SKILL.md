@@ -13,7 +13,8 @@ The user wants to know what the specific people they follow have said, with link
 2. **Read the best hits.** Call `get_item` on the two or three strongest results and read the relevant part. Page with `offset` for long transcripts.
 3. **Fill gaps.** A YouTube hit marked `transcript_missing` matched only on its title. If it looks relevant, call `transcribe_video`. It may give you a command to run on the user's computer; run it, then search again.
 4. **Answer.** Lead with who said what and when. Give each claim its link: use `jump_url` from search, or the video URL with `&t=<seconds>s` from the `[m:ss]` markers in `get_item`. Keep it short; offer to pull more detail.
-5. **Say when there's nothing.** If the user's people haven't covered it, say so plainly. Don't fill in with your own view unless they ask. Suggest following someone who would cover it.
+5. **Look outside their network when it helps.** `search` also returns `out_of_network`: a few matches from sources the user doesn't follow. These are link-only citations: you can't `get_item` them, so cite the title and link and don't present more than the snippet. Lead with the user's own sources. Cite out-of-network ones when the question reaches beyond their people ("is anyone making a case for…?") or when their own sources are thin, and offer to follow the person behind a useful one (`find_person`). While Perspective is young this list is often empty; then use your own web search if the user wants a wider answer.
+6. **Say when there's nothing.** If nobody in Perspective has covered it, say so plainly. Don't fill in with your own view unless they ask. Suggest following someone who would cover it.
 
 While reading, follow the **growing-the-library** skill: save the people the hosts talk about, and offer `suggest_following` after your answer.
 
