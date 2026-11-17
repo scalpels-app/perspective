@@ -1,0 +1,24 @@
+{
+  "name": "perspective",
+  "displayName": "Perspective",
+  "version": "0.1.0",
+  "description": "Follow the people you trust. Perspective consumes their podcasts, YouTube videos and newsletters so your agent can tell you what they said about whatever you're thinking about, and widens what you follow over time.",
+  "author": {
+    "name": "Scalpels",
+    "url": "https://useperspective.com"
+  },
+  "homepage": "https://useperspective.com",
+  "repository": "https://github.com/scalpels-app/perspective",
+  "license": "MIT",
+  "keywords": [
+    "podcasts",
+    "youtube",
+    "newsletters",
+    "research",
+    "mcp"
+  ],
+  "icon": "./.claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://useperspective.com/privacy",
+  "termsOfServiceUrl": "https://useperspective.com/terms",
+  "supportUrl": "https://github.com/scalpels-app/perspective/issues"
+}

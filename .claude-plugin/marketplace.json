@@ -1,0 +1,13 @@
+{
+  "name": "scalpels",
+  "description": "Plugins from Scalpels",
+  "owner": { "name": "Scalpels", "url": "https://useperspective.com" },
+  "plugins": [
+    {
+      "name": "perspective",
+      "source": "./",
+      "description": "Follow the people you trust; your agent tells you what they said.",
+      "category": "productivity"
+    }
+  ]
+}

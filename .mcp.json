@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "perspective": { "type": "http", "url": "https://useperspective.com/mcp" }
+  }
+}
