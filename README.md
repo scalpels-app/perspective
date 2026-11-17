@@ -39,6 +39,7 @@ Then install Perspective from `/plugins`.
 | `following-people` | Turns "follow Jason Cohen" into everything he publishes now, skipping finished shows and namesakes. |
 | `asking-perspective` | Answers "what are my people saying about X?" with who said what, when, and links to the moment. |
 | `growing-the-library` | Notices the people your sources talk about and offers them, one at a time, when relevant. |
+| `writing-a-briefing` | A short briefing on what your people said about what you've been thinking about, plus highlights. Offers to run weekly where your agent can schedule tasks. |
 | `getting-started` | First-run setup, newsletters and billing. |
 
 ## Development

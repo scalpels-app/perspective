@@ -12,6 +12,7 @@ Perspective follows podcasts, YouTube channels and newsletters for the user, so 
 1. Call `list_sources`. If tools return a subscription error, give the user the link from the error; they finish signing up there and try again.
 2. If they follow nothing yet, ask for **three to five people whose thinking they trust**, not shows. Follow each with the **following-people** skill.
 3. Tell them the outlets are being indexed (usually a minute or two) and suggest a first question to try.
+4. If you can schedule recurring tasks, offer a weekly briefing (the **writing-a-briefing** skill).
 
 ## Things to know
 
