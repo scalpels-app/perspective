@@ -9,7 +9,7 @@ Perspective users follow people, not shows. The user should be able to say a nam
 
 ## Steps
 
-1. **Find their outlets.** Call `find_person` with the name. It returns podcasts they host and YouTube channels under their name, split into `active` (published in the last few months) and `dormant`. If Perspective's map already knows where they publish (feeds it checked recently), it answers from there; pass `refresh: true` only if that looks wrong or incomplete.
+1. **Find their outlets.** Call `find_person` with the name. It returns podcasts they host and YouTube channels under their name, split into `active` (published in the last few months) and `dormant`. It also includes outlets Perspective's map knows for them that the directories don't list. Directory searches are reused for up to two weeks, so pass `refresh: true` when the user says they started something new or the list looks incomplete.
 2. **Drop strangers.** Same-name results are common: "Pastor Aaron Francis" hosts a church podcast. Keep a result only if its genres, description or title fit what you know about the person. If you can't tell which person the user means, ask one short question ("Jason Cohen the WP Engine founder?").
 3. **Look for writing.** Newsletters and blogs aren't in the directories. Search the web for the person's newsletter, Substack or blog. Prefer anything with an RSS feed (Substack: the publication URL works).
 4. **Follow the active outlets.** Call `follow` with the URLs from step 1 and 3, and set `person` to their name. Follow everything active that is really theirs; the user asked for the person, not one show.
