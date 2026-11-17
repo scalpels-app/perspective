@@ -16,6 +16,7 @@ Whenever you read an item (`get_item`, or a passage in `search` results) and the
 - Pass the `item_id`.
 - Saving someone again counts another mention; that's how Perspective knows who keeps coming up.
 - Skip people who are only name-dropped in passing, and people the user obviously already follows.
+- Transcripts mishear names. Before `save_lead`, `record_related` or `find_person`, get the spelling right from the show notes, the episode's links, or what you know; a web search settles it if you're unsure. A misspelled name creates a stranger in the shared map instead of adding to the real person.
 
 Also call `record_related` for the same relationship: `person` is the host or author, `related` is the other person with URLs of what they publish now (only ones you know or found; leave the rest out), plus the `item_id`. This feeds Perspective's shared map of who's in whose conversation, so other users' agents don't have to rediscover it. Send only public facts about the two people, never anything about the user or why it matters to them; that belongs in `save_lead`'s reason.
 
