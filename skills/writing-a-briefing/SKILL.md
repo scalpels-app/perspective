@@ -14,7 +14,7 @@ You decide what that is. Use everything you know about the user: what they've be
 1. Call `get_briefing`. It returns:
    - `new_items`: everything published in their library since the last briefing.
    - `recent_topics`: what the user asked Perspective about in the last two weeks. Every topic they asked about more than once, or very recently, deserves a look: they asked for a reason. Treat the rest as hints, not a checklist.
-   - `recently_followed_people` and `top_leads`.
+   - `recently_followed_people`, `top_leads`, and `related_to_your_people` (who has come up recently around the people they follow).
    Calling it marks the briefing as done, so call it once per briefing.
 2. Decide on three to five themes the user would most likely care about this week. Combine what you know of their work and life with `recent_topics`, and let `new_items` surprise you: a cluster of new episodes on something close to their work counts even if they never searched for it.
 
@@ -34,13 +34,13 @@ Scan `new_items` for two or three things worth knowing even though the user didn
 
 ## Enrich as you read
 
-This is the best time to grow the library. Follow the **growing-the-library** skill: whenever an episode features a guest, or the hosts discuss or quote someone who publishes their own work, call `save_lead` with a specific reason. Guests count.
+This is the best time to grow the library. Follow the **growing-the-library** skill: whenever an episode features a guest, or the hosts discuss or quote someone who publishes their own work, call `save_lead` with a specific reason and `record_related` with the public facts. Guests count.
 
 ## Write it
 
 - **On your mind:** one short paragraph per theme: who said what, when, linked. Name the person, then the show.
 - **Also worth your time:** two or three highlights, one or two sentences each, linked.
-- **Someone to add:** at most one person from `top_leads` or from what you just read, with the reason, as a question ("Want me to add what Jason Cohen publishes?").
+- **Someone to add:** at most one person from `top_leads`, `related_to_your_people` or what you just read, with the reason, as a question ("Want me to add what Jason Cohen publishes?").
 
 Keep it under about 300 words. No item-by-item list of new episodes. If almost nothing new touches their themes, say so in a line and keep the highlights.
 

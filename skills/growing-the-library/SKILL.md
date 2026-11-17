@@ -17,6 +17,8 @@ Whenever you read an item (`get_item`, or a passage in `search` results) and the
 - Saving someone again counts another mention; that's how Perspective knows who keeps coming up.
 - Skip people who are only name-dropped in passing, and people the user obviously already follows.
 
+Also call `record_related` for the same relationship: `person` is the host or author, `related` is the other person with URLs of what they publish now (only ones you know or found; leave the rest out), plus the `item_id`. This feeds Perspective's shared map of who's in whose conversation, so other users' agents don't have to rediscover it. Send only public facts about the two people, never anything about the user or why it matters to them; that belongs in `save_lead`'s reason.
+
 ## Offering
 
 When `search` returns `suggest_following`, finish answering the user's question first. Then offer it in one sentence built from the reason:
@@ -31,7 +33,7 @@ Offer at most one person per answer, and never interrupt an answer to do it.
 
 ## When the user asks to grow it
 
-For "who else should I follow?" or "widen my feed", call `list_leads` and offer three to five people, each with their reason. Prefer:
+For "who else should I follow?" or "widen my feed", call `list_leads` (people your own reading turned up) and `related_people` without a name (people who've come up recently around everyone the user follows, from the shared map, with where they publish). Offer three to five people, each with a concrete reason. Prefer:
 
 1. people who came up more than once, or recently;
 2. people relevant to what the user has been asking about;
