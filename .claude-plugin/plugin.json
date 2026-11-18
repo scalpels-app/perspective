@@ -1,10 +1,11 @@
 {
   "name": "perspective",
   "displayName": "Perspective",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description": "Follow the people you trust. Perspective consumes their podcasts, YouTube videos and newsletters so your agent can tell you what they said about whatever you're thinking about, and widens what you follow over time.",
   "author": {
-    "name": "Scalpels",
+    "name": "Artisan Build, Inc.",
+    "email": "hello@artisan.build",
     "url": "https://useperspective.com"
   },
   "homepage": "https://useperspective.com",
@@ -16,5 +17,10 @@
     "newsletters",
     "research",
     "mcp"
-  ]
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://useperspective.com/support",
+  "supportUrl": "https://useperspective.com/support",
+  "privacyPolicyUrl": "https://useperspective.com/privacy",
+  "termsOfServiceUrl": "https://useperspective.com/terms"
 }

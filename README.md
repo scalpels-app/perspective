@@ -42,6 +42,22 @@ Then install Perspective from `/plugins`.
 | `writing-a-briefing` | A short briefing on what your people said about what you've been thinking about, plus highlights. Offers to run weekly where your agent can schedule tasks. |
 | `getting-started` | First-run setup, newsletters and billing. |
 
+## What this plugin sends and stores
+
+The plugin itself runs nothing locally; it adds Perspective's remote MCP server and skills. Through that server, your
+agent:
+
+- follows sources for you and searches what they've published (Perspective keeps your search terms for 30 days so
+  briefings can focus on what you've asked about);
+- notes people your sources discuss so it can suggest them later (`save_lead`, visible only to you), and adds public
+  facts about who featured whom to a map shared by all Perspective users (`record_related`; nothing about you goes in);
+- opens a newsletter's confirmation link only when you ask (`confirm_subscription`);
+- sends feedback only when you ask (`send_feedback`).
+
+Perspective is a paid subscription; you subscribe while signing in the first time. Details:
+[privacy policy](https://useperspective.com/privacy), [terms](https://useperspective.com/terms),
+[support](https://useperspective.com/support).
+
 ## Development
 
 The skills drive tools on the Perspective server (in `artisan-build/useperspective.com`). Validate with

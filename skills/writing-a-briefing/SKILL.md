@@ -7,7 +7,7 @@ description: Write a Perspective content briefing of what the user would most wa
 
 A briefing is not a list of everything new. It's a short note with what the user would most want to know from the people they follow right now. Most weeks it should take two minutes to read.
 
-You decide what that is. Use everything you know about the user: what they've been working on, building, deciding or worrying about, from this conversation, your memory, their projects and recent sessions you can see. That picture is your main guide. Perspective's search history fills in what you can't see.
+You decide what that is. Your main guide is what the user has told you about what they're working on, building, deciding or worrying about, in this conversation or in the briefing request itself. Perspective's search history fills in the rest. Don't send any of it to Perspective; it only shapes which themes you search.
 
 ## Gather
 
@@ -16,7 +16,7 @@ You decide what that is. Use everything you know about the user: what they've be
    - `recent_topics`: what the user asked Perspective about in the last two weeks. Every topic they asked about more than once, or very recently, deserves a look: they asked for a reason. Treat the rest as hints, not a checklist.
    - `recently_followed_people`, `top_leads`, and `related_to_your_people` (who has come up recently around the people they follow).
    Calling it marks the briefing as done, so call it once per briefing.
-2. Decide on three to five themes the user would most likely care about this week. Combine what you know of their work and life with `recent_topics`, and let `new_items` surprise you: a cluster of new episodes on something close to their work counts even if they never searched for it.
+2. Decide on three to five themes the user would most likely care about this week. Combine what they've told you with `recent_topics`, and let `new_items` surprise you: a cluster of new episodes on something close to their work counts even if they never searched for it.
 
 ## Cover those themes first
 
@@ -46,7 +46,7 @@ Keep it under about 300 words. No item-by-item list of new episodes. If almost n
 
 ## Scheduling
 
-If your harness can run tasks on a schedule (scheduled tasks, routines, automations), offer once to set up a recurring briefing, weekly by default, at a time the user picks. The scheduled prompt should be short, for example: "Use the Perspective writing-a-briefing skill to write my briefing." Deliver it however the harness delivers scheduled results.
+If your harness can run tasks on a schedule (scheduled tasks, routines, automations), offer once to set up a recurring briefing, weekly by default, at a time the user picks. The scheduled prompt should be short, and can say what the user is focused on so each run knows, for example: "Use the Perspective writing-a-briefing skill to write my briefing. Lately I'm focused on [what they told you]." Ask the user before putting their focus in it. Deliver it however the harness delivers scheduled results.
 
 If you can't schedule, offer the briefing on demand instead ("ask me 'what did I miss?' any time").
 

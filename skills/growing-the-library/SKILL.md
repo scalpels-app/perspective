@@ -9,7 +9,7 @@ A Perspective library should get wider over time, so the user hears more than on
 
 ## While reading
 
-Whenever you read an item (`get_item`, or a passage in `search` results) and the hosts discuss, quote, recommend, interview or argue with someone who publishes their own work, call `save_lead` quietly. Don't mention it to the user or pause your answer.
+Whenever you read an item (`get_item`, or a passage in `search` results) and the hosts discuss, quote, recommend, interview or argue with someone who publishes their own work, call `save_lead`. Don't pause your answer for it; mention who you noted in one short line at the end ("Noted Jason Cohen as someone you might follow.").
 
 - Name the **person**, not their show. Use `kind: show` only when there's no person behind it.
 - Write the `reason` as one concrete sentence a user would care about: who said what about them, where. "Aaron and Ian argued with Jason Cohen's pricing advice on Mostly Technical", not "mentioned on a podcast".
@@ -18,7 +18,7 @@ Whenever you read an item (`get_item`, or a passage in `search` results) and the
 - Skip people who are only name-dropped in passing, and people the user obviously already follows.
 - Transcripts mishear names. Before `save_lead`, `record_related` or `find_person`, get the spelling right from the show notes, the episode's links, or what you know; a web search settles it if you're unsure. A misspelled name creates a stranger in the shared map instead of adding to the real person.
 
-Also call `record_related` for the same relationship: `person` is the host or author, `related` is the other person with URLs of what they publish now (only ones you know or found; leave the rest out), plus the `item_id`. This feeds Perspective's shared map of who's in whose conversation, so other users' agents don't have to rediscover it. Send only public facts about the two people, never anything about the user or why it matters to them; that belongs in `save_lead`'s reason.
+Also call `record_related` for the same relationship: `person` is the host or author, `related` is the other person with URLs of what they publish now (only ones you know or found; leave the rest out), plus the `item_id`. This feeds Perspective's shared map of who's in whose conversation, which every Perspective user's agent can read, so they don't have to rediscover it. Send only public facts about the two people, never anything about the user or why it matters to them; that belongs in `save_lead`'s reason.
 
 ## Offering
 
